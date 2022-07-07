@@ -1,0 +1,63 @@
+// Vitest Snapshot v1
+
+exports[`moduleGraph > build import map with a common modules used by others 1`] = `
+Map {
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/index.ts" => ModuleNode {
+    "importedModules": Set {
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/a.ts",
+    },
+    "importers": Set {},
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/a.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/index.ts",
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/index-2.ts",
+    },
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/index-2.ts" => ModuleNode {
+    "importedModules": Set {
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/commonImport/a.ts",
+    },
+    "importers": Set {},
+  },
+}
+`;
+
+exports[`moduleGraph > build import map with fullly path and not fullly path 1`] = `
+Map {
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/normalImport/index.ts" => ModuleNode {
+    "importedModules": Set {
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/normalImport/a.ts",
+    },
+    "importers": Set {},
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/normalImport/a.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {
+      "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/normalImport/index.ts",
+    },
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/withoutSuffix/index.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {},
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/withoutSuffix/a.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {},
+  },
+}
+`;
+
+exports[`moduleGraph > skip non-ts or non-tsx file 1`] = `
+Map {
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/withNotTSImport/index.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {},
+  },
+  "/Users/wenzhe/Documents/repos/give-me-type/test/fixtures/moduleGraphExample/withNotTSImport/a.ts" => ModuleNode {
+    "importedModules": Set {},
+    "importers": Set {},
+  },
+}
+`;
