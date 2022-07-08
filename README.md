@@ -17,7 +17,7 @@ pnpm i mf-dts-generator
 
 ## 功能介绍
 
-受[dts-loader](https://github.com/ruanyl/dts-loader) 灵感的激发。
+受 [dts-loader](https://github.com/ruanyl/dts-loader) 灵感的激发。
 
 在使用模块联邦的时候，一端叫做 host，他会使用来自 remote 的模块。本工具主要的原理是在 remote 模块文件变更的时候，会借助 Rollup 生成类型，生成类型完毕后再下载到 host 项目目录。这样就能在 host 目录获取到类型提示了。具体的效果可以跑一下 example 的例子。
 
