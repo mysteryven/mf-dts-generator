@@ -1,7 +1,7 @@
 # 模块联邦类型生成器
 ## 说明
 
-用于为模块联邦项目生成类型，不依赖于框架，可以在 webpack 或 vite 中使用。
+用于为模块联邦项目生成类型，不依赖于框架，可以在 Webpack、Vite、Rollup 中使用。
 
 ## 安装
 
@@ -19,7 +19,7 @@ pnpm i mf-dts-generator
 
 受 [dts-loader](https://github.com/ruanyl/dts-loader) 灵感的激发。
 
-在使用模块联邦的时候，一端叫做 host，他会使用来自 remote 的模块。本工具主要的原理是在 remote 模块文件变更的时候，会借助 Rollup 生成类型，生成类型完毕后再下载到 host 项目目录。这样就能在 host 目录获取到类型提示了。具体的效果可以跑一下 example 的例子。
+在使用模块联邦的时候，一端叫做 host，他会使用来自 remote 的模块。本工具主要的原理是在 remote 模块文件变更的时候，会借助 Rollup 生成类型，生成类型完毕后再下载到 host 项目目录。这样就能在 host 目录获取到类型提示了。具体的效果可以跑一下 [example](./packages/playground/webpack-demo/) 的例子。
 
 在监听类型变化的时候，是以 exposes 为维度做热更新的，也就是说如果我们 exposes 配置里导出两个模块，但只要一个模块下的依赖的文件发生变化，那只会重新生成一个入口文件的类型。
 
