@@ -15,13 +15,23 @@ npm i mf-dts-generator
 pnpm i mf-dts-generator
 ```
 
+## 命令介绍
+
+`mf serve -c [<configFile>]`：启动服务
+
+`mf listen -c [<configFile>]`：启动一个 websocket client 端
+
+`mf server --help`： 查看帮助
+
+`mf server --listen`： 查看帮助
+
 ## 功能介绍
 
 受 [dts-loader](https://github.com/ruanyl/dts-loader) 灵感的激发。
 
 在使用模块联邦的时候，一端叫做 host，他会使用来自 remote 的模块。本工具主要的原理是在 remote 模块文件变更的时候，会借助 Rollup 生成类型，生成类型完毕后再下载到 host 项目目录。这样就能在 host 目录获取到类型提示了。具体的效果可以跑一下 [example](./packages/playground/webpack-demo/) 的例子。
 
-在监听类型变化的时候，是以 exposes 为维度做热更新的，也就是说如果我们 exposes 配置里导出两个模块，但只要一个模块下的依赖的文件发生变化，那只会重新生成一个入口文件的类型。
+在监听类型变化的时候，是以 exposes 为维度做热更新的，也就是说如果我们 exposes 配置里导出两个模块，但只有一个模块下的依赖的文件发生变化，那只会重新生成一个入口文件的类型。
 
 ## 配置文件
 
@@ -37,7 +47,8 @@ export interface MFTypeConfig {
     exposes: Record<string, string>; // 同 remote 的 exposes 字段，但是 value 需要是绝对路径
     targetPaths: string[]; // monorepo 可以指定此项，【如何使用】部分有介绍 
     clientOutDir?: string; // host 下载的目录，默认是 types
-    alias: Record<string, string> // 相当于别名 比如一项可能是：'@/component': path.join(__dirname, './src/component')
+    alias: Record<string, string> 
+    // 相当于配置别名 比如一项可能是：'@/component': path.join(__dirname, './src/component')，我只做的字符串替换，所有不支持 anyMatch 那种写法 
 }
 ```
 
