@@ -1,6 +1,6 @@
 {
   "name": "mf-dts-generator",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "My awesome typescript library",
   "publishConfig": {
     "access": "public"
@@ -13,6 +13,12 @@
   "exports": {
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
+  },
+  "author": "mysteryven",
+  "homepage": "https://github.com/mysteryven/mf-dts-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mysteryven/mf-dts-generator"
   },
   "scripts": {
     "start": "tsup --watch",
