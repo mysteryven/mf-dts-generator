@@ -1,5 +1,5 @@
-node_modules
-.DS_Store
-dist
-*.log
-__snapshots
+/node_modules/*
+**/*/node_modules
+**/*/dist
+/dist
+.pnpm-debug.log
