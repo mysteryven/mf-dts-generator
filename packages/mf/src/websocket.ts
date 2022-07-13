@@ -59,15 +59,15 @@ export function createWebSocketClient(options: MFTypeConfig) {
                 }
                 info(`类型已经拷贝好[${getTime()}]`);
             } else {
-                const tempClientDtsFileName = path.resolve(__dirname, 'my.tar.tgz');
+                const tempClientDtsFileName = path.resolve(options.root, 'my.tar.tgz');
                 await downloadFile(tempClientDtsFileName)
                 // readConfig 的时候强制添加了，默认值是 types
-                fs.ensureDirSync(path.join(__dirname, options.clientOutDir!))
+                fs.ensureDirSync(path.join(options.root, options.clientOutDir!))
                 await tar.x({
                     file: tempClientDtsFileName,
-                    cwd: path.join(__dirname, options.clientOutDir!)
+                    cwd: path.join(options.root, options.clientOutDir!)
                 })
-                info(`类型已下载好了[${getTime()}]\n`);
+                info(`类型已下载好了[${getTime()}]`);
                 await fs.remove(tempClientDtsFileName)
             }
         }
