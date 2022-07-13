@@ -1,6 +1,6 @@
 {
   "name": "mf-dts-generator",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "My awesome typescript library",
   "publishConfig": {
     "access": "public"
@@ -14,6 +14,18 @@
     "require": "./dist/index.js",
     "import": "./dist/index.mjs"
   },
+  "keywords": [
+    "Webpack",
+    "Module Federation",
+    "Webpack 5",
+    "vite-plugin-federation"
+  ],
+  "author": "mysteryven",
+  "homepage": "https://github.com/mysteryven/mf-dts-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mysteryven/mf-dts-generator"
+  },
   "scripts": {
     "start": "tsup --watch",
     "build": "tsup",
@@ -25,8 +37,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@types/fs-extra": "^9.0.13",
-    "@types/ws": "^8.5.3",
     "chokidar": "^3.5.3",
     "connect-static": "^1.6.0",
     "es-module-lexer": "^0.10.5",
@@ -43,9 +53,10 @@
   },
   "devDependencies": {
     "@egoist/prettier-config": "^1.0.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/ws": "^8.5.3",
     "@types/node": "^17.0.38",
     "@types/connect": "^3.4.35",
-    "@types/ws": "^8.5.3",
     "@types/serve-handler": "^6.1.1",
     "@types/throttle-debounce": "^5.0.0",
     "@types/tar": "^6.1.1",
