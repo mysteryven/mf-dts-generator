@@ -1,4 +1,7 @@
 # 模块联邦类型生成器
+
+ps：如果有朋友用，遇到了问题，提 issue，我响应很快的哈。
+
 ## 说明
 
 用于为模块联邦项目生成类型，不依赖于框架，可以在 Webpack、Vite、Rollup 中使用。
@@ -21,9 +24,9 @@ pnpm i mf-dts-generator
 
 `mf listen -c [<configFile>]`：启动一个 websocket client 端
 
-`mf server --help`： 查看帮助
+`mf serve --help`： 查看 serve 下的帮助
 
-`mf server --listen`： 查看帮助
+`mf listen --help`： 查看 listen 下的帮助
 
 ## 功能介绍
 
