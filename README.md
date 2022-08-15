@@ -1,5 +1,8 @@
 # 模块联邦类型生成器
 
+[![npm version](https://badgen.net/npm/v/mf-dts-generator)](https://npm.im/mf-dts-generator) 
+[![npm downloads](https://badgen.net/npm/dm/mf-dts-generator)](https://npm.im/mf-dts-generator)
+
 ps：如果有朋友用，遇到了问题，提 issue，我响应很快的哈。
 
 ## 说明
