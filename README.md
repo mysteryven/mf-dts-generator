@@ -29,7 +29,7 @@ pnpm i mf-dts-generator
 
 ## Intro
 
-Inspired [dts-loader](https://github.com/ruanyl/dts-loader).
+Inspired by [dts-loader](https://github.com/ruanyl/dts-loader).
 
 When we use MF(Module Federation) in host to consume a module(used module from Remote), like this:
 
@@ -141,6 +141,7 @@ module.exports = {
 ```
 
 
+## Credicts
 
-
+[dts-loader](https://github.com/ruanyl/dts-loader)
 
